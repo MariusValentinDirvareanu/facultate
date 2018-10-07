@@ -1,6 +1,7 @@
 #include <iostream>
 #include "EcGrad2.h"
 #include "FactoriPrimi.h"
+#include "BubleSort.h"
 
 using namespace std;
 
@@ -65,9 +66,11 @@ int main()
 				cout << "Optiune algoritmi de sortare: "; cin >> op2;
 				switch (op2)
 				{
-				case 1:
-					//BubleSort();
+				case 1: {
+					vector<int> av = { 3,9,4,6,7,5,7,6,10,56 };
+					BubleSort sir(av);
 					break;
+				}
 
 				case 0:
 					cout << "A terminat submeniu 2" << endl << endl;
