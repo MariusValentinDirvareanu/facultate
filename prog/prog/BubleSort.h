@@ -7,13 +7,12 @@ class BubleSort
 {
 private:
 	vector<int> vec;
-	int n = 0, i, newn;
+	int n = 0, i, newn, j;
 
 public:
 	BubleSort();
 	BubleSort(vector<int>);
-	void sort(vector<int>);
-	void afisare();
+	void afisare() const;
 	~BubleSort();
 };
 

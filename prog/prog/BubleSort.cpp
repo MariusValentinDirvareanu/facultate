@@ -9,10 +9,6 @@ BubleSort::BubleSort()
 }
 
 BubleSort::BubleSort(vector<int> v) {
-	sort(v);
-}
-
-void BubleSort::sort(vector<int> v) {
 	vec = v;
 	n = (int)vec.size();
 	do {
@@ -23,11 +19,13 @@ void BubleSort::sort(vector<int> v) {
 				newn = i;
 			}
 		}
-	} while (n <= 1);
+		n = newn;
+	} while (n > 0);
 	afisare();
 }
 
-void BubleSort::afisare() {
+
+void BubleSort::afisare() const{
 	for (auto aa : vec) {
 		cout << aa << ' ';
 	}

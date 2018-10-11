@@ -15,5 +15,6 @@ private:
 public:
 	SelectionSort(vector<int>);
 	~SelectionSort();
+	void afisare() const;
 };
 

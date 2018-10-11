@@ -16,8 +16,7 @@ FactoriPrimi::FactoriPrimi(int l) {
 	prim(l);
 }
 
-void FactoriPrimi::afisare()
-{
+void FactoriPrimi::afisare() {
 	i = 1;
 	for (r = 0; r < j; ++r)
 	{

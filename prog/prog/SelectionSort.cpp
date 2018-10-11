@@ -16,6 +16,10 @@ SelectionSort::SelectionSort(vector<int> a){
 			swap(vec.at(j), vec.at(iMin));
 		}
 	}
+	afisare();
+}
+
+void SelectionSort::afisare() const{
 	for (auto e : vec) {
 		cout << e << ' ';
 	}
