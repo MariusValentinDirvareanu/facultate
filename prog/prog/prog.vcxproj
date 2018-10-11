@@ -118,12 +118,14 @@
     <ClCompile Include="BubleSort.cpp" />
     <ClCompile Include="EcGrad2.cpp" />
     <ClCompile Include="FactoriPrimi.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubleSort.h" />
     <ClInclude Include="EcGrad2.h" />
     <ClInclude Include="FactoriPrimi.h" />
+    <ClInclude Include="SelectionSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

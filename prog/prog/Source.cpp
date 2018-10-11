@@ -2,6 +2,7 @@
 #include "EcGrad2.h"
 #include "FactoriPrimi.h"
 #include "BubleSort.h"
+#include "SelectionSort.h"
 
 using namespace std;
 
@@ -59,7 +60,7 @@ int main()
 			do
 			{
 				cout << "2.1. Algoritm Buble Sort" << endl;
-				cout << "2.2. " << endl;
+				cout << "2.2. Algoritm Selection Sort" << endl;
 				cout << "2.3." << endl;
 				cout << "2.4. " << endl;
 				cout << "2.0. Exit algoritmi de sortare!" << endl;
@@ -69,6 +70,11 @@ int main()
 				case 1: {
 					vector<int> av = { 3,9,4,6,7,5,7,6,10,56 };
 					BubleSort sir(av);
+					break;
+				}
+				case 2: {
+					vector<int> e = { 3,9,4,6,7,5,7,6,10,56 };
+					SelectionSort sir2(e);
 					break;
 				}
 
