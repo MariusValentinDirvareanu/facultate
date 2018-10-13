@@ -2,6 +2,7 @@
 #include "EcGrad2.h"
 #include "FactoriPrimi.h"
 #include "BubleSort.h"
+#include "CMMDC.h"
 #include "SelectionSort.h"
 
 using namespace std;
@@ -41,6 +42,11 @@ int main()
 
 				case 3: {
 					FactoriPrimi factor;
+					cout << '\n';
+					break; }
+
+				case 4: {
+					CMMDC cmmdc;
 					cout << '\n';
 					break; }
 

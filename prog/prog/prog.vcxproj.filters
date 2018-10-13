@@ -30,6 +30,12 @@
     <ClCompile Include="SelectionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CMMDC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CountingSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EcGrad2.h">
@@ -42,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SelectionSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CMMDC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CountingSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
