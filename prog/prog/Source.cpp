@@ -5,6 +5,7 @@
 #include "CMMDC.h"
 #include "SelectionSort.h"
 #include "CountingSort.h"
+#include "QuickSort.h"
 
 using namespace std;
 
@@ -69,7 +70,7 @@ int main()
 				cout << "2.1. Algoritm Buble Sort" << endl;
 				cout << "2.2. Algoritm Selection Sort" << endl;
 				cout << "2.3. Algoritm Counting Sort" << endl;
-				cout << "2.4. " << endl;
+				cout << "2.4. Algoritm Quick Sort" << endl;
 				cout << "2.0. Exit algoritmi de sortare!" << endl;
 				cout << "Optiune algoritmi de sortare: "; cin >> op2;
 				switch (op2)
@@ -88,6 +89,12 @@ int main()
 				case 3: {
 					vector<double> e = { 3,9,4,6,7,5,3.5,8.66,10,56 };
 					CountingSort sir3(e);
+					break;
+				}
+
+				case 4: {
+					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
+					QuickSort sir4(e,0,(int)e.size()-1);
 					break;
 				}
 

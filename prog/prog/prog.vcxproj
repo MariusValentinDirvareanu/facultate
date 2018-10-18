@@ -120,6 +120,7 @@
     <ClCompile Include="CountingSort.cpp" />
     <ClCompile Include="EcGrad2.cpp" />
     <ClCompile Include="FactoriPrimi.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
@@ -129,6 +130,7 @@
     <ClInclude Include="CountingSort.h" />
     <ClInclude Include="EcGrad2.h" />
     <ClInclude Include="FactoriPrimi.h" />
+    <ClInclude Include="QuickSort.h" />
     <ClInclude Include="SelectionSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
