@@ -6,6 +6,7 @@
 #include "SelectionSort.h"
 #include "CountingSort.h"
 #include "QuickSort.h"
+#include "MergeSort.h"
 
 using namespace std;
 
@@ -71,6 +72,7 @@ int main()
 				cout << "2.2. Algoritm Selection Sort" << endl;
 				cout << "2.3. Algoritm Counting Sort" << endl;
 				cout << "2.4. Algoritm Quick Sort" << endl;
+				cout << "2.5. Algoritm Merge Sort" << endl;
 				cout << "2.0. Exit algoritmi de sortare!" << endl;
 				cout << "Optiune algoritmi de sortare: "; cin >> op2;
 				switch (op2)
@@ -95,6 +97,12 @@ int main()
 				case 4: {
 					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
 					QuickSort sir4(e,0,(int)e.size()-1);
+					break;
+				}
+
+				case 5: {
+					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
+					MergeSort sir5(e, 0, (int)e.size() - 1);
 					break;
 				}
 

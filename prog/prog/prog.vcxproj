@@ -120,6 +120,7 @@
     <ClCompile Include="CountingSort.cpp" />
     <ClCompile Include="EcGrad2.cpp" />
     <ClCompile Include="FactoriPrimi.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -130,6 +131,7 @@
     <ClInclude Include="CountingSort.h" />
     <ClInclude Include="EcGrad2.h" />
     <ClInclude Include="FactoriPrimi.h" />
+    <ClInclude Include="MergeSort.h" />
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="SelectionSort.h" />
   </ItemGroup>
