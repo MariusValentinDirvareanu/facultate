@@ -56,7 +56,7 @@ void MergeSort::mSort(vector<int> a, int l, int r)
 	vec = a;
 	if (l < r)
 	{
-		int m = l + (r - l) / 2;
+		m = l + (r - l) / 2;
 
 		mSort(vec, l, m);
 		mSort(vec, m + 1, r);
