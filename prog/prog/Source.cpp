@@ -2,11 +2,15 @@
 #include "EcGrad2.h"
 #include "FactoriPrimi.h"
 #include "BubleSort.h"
-#include "CMMDC.h"
+#include "cmmdc.h"
 #include "SelectionSort.h"
 #include "CountingSort.h"
 #include "QuickSort.h"
 #include "MergeSort.h"
+#include "InsertionSort.h"
+#include "RadixSort.h"
+#include "ShellSort.h"
+#include "Cautare.h"
 
 using namespace std;
 
@@ -49,7 +53,7 @@ int main()
 					break; }
 
 				case 4: {
-					CMMDC cmmdc;
+					cmmdc cmmdc;
 					cout << '\n';
 					break; }
 
@@ -73,6 +77,10 @@ int main()
 				cout << "2.3. Algoritm Counting Sort" << endl;
 				cout << "2.4. Algoritm Quick Sort" << endl;
 				cout << "2.5. Algoritm Merge Sort" << endl;
+				cout << "2.6. Algoritm Insertion Sort" << endl;
+				cout << "2.7. Algoritm Radix Sort" << endl;
+				cout << "2.8. Algoritm Shell Sort" << endl;
+				cout << "2.9. Cautare element" << endl;
 				cout << "2.0. Exit algoritmi de sortare!" << endl;
 				cout << "Optiune algoritmi de sortare: "; cin >> op2;
 				switch (op2)
@@ -106,6 +114,31 @@ int main()
 					break;
 				}
 
+				case 6: {
+					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
+					InsertionSort sir6(e);
+					break;
+				}
+
+				case 7: {
+					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
+					RadixSort sir7(e);
+					break;
+				}
+
+				case 8: {
+					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
+					ShellSort sir8(e);
+					break;
+				}
+
+				case 9: {
+					vector<int> e = { 3,9,55,6,7,5,4,8,10,56 };
+					int r = 7;
+					Cautare element(e,r);
+					break;
+				}
+
 				case 0:
 					cout << "A terminat submeniu 2" << endl << endl;
 					break;
@@ -129,7 +162,5 @@ int main()
 
 		}
 	} while (op != 0); // end meniu principal
-
-	system("PAUSE");
 	return 0;
 }
