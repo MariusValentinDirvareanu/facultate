@@ -2,7 +2,7 @@
 #include "EcGrad2.h"
 #include "FactoriPrimi.h"
 #include "BubleSort.h"
-#include "cmmdc.h"
+#include "CMMDC.h"
 #include "SelectionSort.h"
 #include "CountingSort.h"
 #include "QuickSort.h"
@@ -53,7 +53,7 @@ int main()
 					break; }
 
 				case 4: {
-					cmmdc cmmdc;
+					CMMDC cmmdc;
 					cout << '\n';
 					break; }
 

@@ -4,7 +4,7 @@ RadixSort::RadixSort(vector<int> a)
 {
     vec=a;
     Count.resize(10);
-    n=vec.size();
+    n=(int)vec.size();
     m=maxElement();
     rsort();
     afisare();
