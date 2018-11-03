@@ -7,13 +7,13 @@ using namespace std;
 class CountingSort
 {
 private:
-	vector<double> vec;
-	vector<double> output;
+	vector<int> vec;
+	vector<int> output;
 	vector<unsigned> count;
 	int i, j, n;
 
 public:
-	CountingSort(vector<double>);
+	CountingSort(vector<int>);
 	//TODO:Counting Sort cand sunt numere egale in sir
 	void afisare() const;
 	~CountingSort();

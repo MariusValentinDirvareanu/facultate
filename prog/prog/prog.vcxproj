@@ -140,6 +140,7 @@
     <ClInclude Include="CountingSort.h" />
     <ClInclude Include="EcGrad2.h" />
     <ClInclude Include="FactoriPrimi.h" />
+    <ClInclude Include="vec.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="MergeSort.h" />
     <ClInclude Include="QuickSort.h" />

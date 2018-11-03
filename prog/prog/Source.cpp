@@ -12,6 +12,7 @@
 #include "RadixSort.h"
 #include "ShellSort.h"
 #include "Cautare.h"
+#include "vec.h"
 
 using namespace std;
 using namespace chrono;
@@ -91,7 +92,7 @@ int main()
 				case 1: {
 					start = steady_clock::now();
 					vector<int> av = { 3,9,4,6,7,5,7,6,10,56 };
-					BubleSort sir(av);
+					BubleSort sir(ee);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -100,7 +101,7 @@ int main()
 				case 2: {
 					start = steady_clock::now();
 					vector<int> e = { 3,9,4,6,7,5,7,6,10,56 };
-					SelectionSort sir2(e);
+					SelectionSort sir2(ee);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -110,7 +111,7 @@ int main()
 				case 3: {
 					start = steady_clock::now();
 					vector<double> e = { 3,9,4,6,7,5,3.5,8.66,10,56 };
-					CountingSort sir3(e);
+					CountingSort sir3(ee);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -120,7 +121,7 @@ int main()
 				case 4: {
 					start = steady_clock::now();
 					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
-					QuickSort sir4(e,0,(int)e.size()-1);
+					QuickSort sir4(ee,0,(int)ee.size()-1);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -130,7 +131,7 @@ int main()
 				case 5: {
 					start = steady_clock::now();
 					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
-					MergeSort sir5(e, 0, (int)e.size() - 1);
+					MergeSort sir5(ee, 0, (int)ee.size() - 1);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -140,7 +141,7 @@ int main()
 				case 6: {
 					start = steady_clock::now();
 					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
-					InsertionSort sir6(e);
+					InsertionSort sir6(ee);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -150,7 +151,7 @@ int main()
 				case 7: {
 					start = steady_clock::now();
 					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
-					RadixSort sir7(e);
+					RadixSort sir7(ee);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;
@@ -160,7 +161,7 @@ int main()
 				case 8: {
 					start = steady_clock::now();
 					vector<int> e = { 3,9,4,6,7,5,3,8,10,56 };
-					ShellSort sir8(e);
+					ShellSort sir8(ee);
 					end = steady_clock::now();
 					duration<double> elapsed_seconds = end - start;
 					cout << elapsed_seconds.count() << endl;

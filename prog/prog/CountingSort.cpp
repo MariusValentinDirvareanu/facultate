@@ -2,7 +2,7 @@
 
 
 
-CountingSort::CountingSort(vector<double> a)
+CountingSort::CountingSort(vector<int> a)
 {
 	vec = a;
 	n = (int)vec.size();

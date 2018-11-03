@@ -8,7 +8,7 @@ InsertionSort::InsertionSort(vector<int> a)
 }
 
 void InsertionSort::iSort(){
-    n=vec.size();
+	n = (int)vec.size();
     i=1;
     while(i<n){
         j=i;
