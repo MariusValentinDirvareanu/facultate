@@ -59,7 +59,7 @@ void parcurgere_lista(punct *cap)
 void stergereLista(punct **cap) {
 	punct *p, *next;
 	p = *cap;
-	while (p!=NULL) {
+	while (p != NULL) {
 		next = p->urm;
 		delete(p);
 		p = next;
@@ -68,15 +68,16 @@ void stergereLista(punct **cap) {
 }
 
 
-/*void stergereLista(punct *cap) {
+void stergereLista2(punct *cap) {
 	punct *p;
 	p = cap;
 	while (p != NULL) {
 		cap = cap->urm;
-		delete(p);
+		delete cap;
+		//p = nullptr;
 		p = cap;
 	}
-}*/
+}
 
 punct* adaugareLaInceput(punct* cap, float v) {
 	punct *p;
@@ -137,8 +138,12 @@ int main() // program liste
 	parcurgere_lista();
 	*/
 
-	stergereLista(&cap);
+	//stergereLista(&cap);
+	stergereLista2(cap);
 	parcurgere_lista(cap);
+
+	/*cap=adaugareLaInceput(cap, 2);
+	parcurgere_lista(cap);*/
 
 
 	system("PAUSE");

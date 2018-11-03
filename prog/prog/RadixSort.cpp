@@ -25,19 +25,19 @@ void RadixSort::countSort(int n, int exp)
     output.resize(n);
 
     for (i = 0; i < n; i++)
-        Count[ (vec[i]/exp)%10 ]++;
+        Count.at((vec.at(i)/exp)%10 )++;
 
     for (i = 1; i < 10; i++)
-        Count[i] += Count[i - 1];
+        Count.at(i) += Count[i - 1];
 
     for (i = n - 1; i >= 0; i--)
     {
-        output[Count[ (vec[i]/exp)%10 ] - 1] = vec[i];
-        Count[ (vec[i]/exp)%10 ]--;
+        output.at(Count.at((vec.at(i)/exp)%10 ) - 1) = vec.at(i);
+        Count.at((vec.at(i)/exp)%10)--;
     }
 
     for (i = 0; i < n; i++)
-        vec[i] = output[i];
+        vec.at(i) = output.at(i);
 }
 
 void RadixSort::rsort()
