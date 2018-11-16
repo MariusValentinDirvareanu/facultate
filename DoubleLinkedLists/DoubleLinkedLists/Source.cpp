@@ -1,9 +1,11 @@
 #include <iostream>
 
 using namespace std;
+// PROGRAM LISTA DUBLU INLANTUITA
 
 struct punct {
 	float x;
+	punct *prec;
 	punct *urm;
 };
 
@@ -16,6 +18,7 @@ punct *creare_lista()
 	cout << "Valoarea primului punct v= ";
 	cin >> v;
 	prim->x = v;
+	prim->prec = NULL;
 	prim->urm = NULL;
 	q = prim; // q este utlimul punct din lista, care la inceput coincide cu primul punct
 	do
@@ -28,6 +31,7 @@ punct *creare_lista()
 			cin >> v;
 			p = new punct;
 			p->x = v;
+			p->prec = q;
 			p->urm = NULL;
 			q->urm = p;
 			q = p; // ultimul punct din lista
@@ -56,109 +60,102 @@ void parcurgere_lista(punct *cap)
 	}
 }
 
-#define PL parcurgere_lista(cap);
-
-//stergere lista completa
-punct* stergereLista(punct *cap) {
-	punct *p;
-	p = cap;
-	while (p != NULL) {
-		cap = cap->urm;
-		delete p;
-		p = cap;
-	}
-	return p;
-}
-
-
-punct* stergereElementLista(punct *cap, float element) {
+void parcurgere_lista_invers(punct *cap)
+{
 	punct *p, *q;
-	q = nullptr;
-	p = cap;
-	if (cap->x == element) {
-		p = cap;
-		cap = cap->urm;
-		delete p;
-	}
+	int n = 0; //numara punctele din lista
+
+	if (!cap) // cap este NULL, adica lista este vida
+		cout << "Lista este vida! " << endl;
 	else
 	{
-		p = cap->urm;
+		// lista nu este vida; o afiseaza si numara ounctele listei
+		cout << "Lista de puncte inversata este:" << endl;
+		// ajung la ultimul element din lista
 		q = cap;
-		while (p != NULL) {
-			//q = p->urm;
-			//cap = cap->urm;
-			if (p->x == element) {
-				q->urm = p->urm;
-				//p->urm = cap;
-				delete p;
-				break;
-			}
+		p = cap->urm;
+		while (p)
+		{
+			q = p;
 			p = p->urm;
 		}
+		// in q este ultimul element din lista
+		for (p = q; p; p = p->prec)
+		{
+			n++;
+			cout << p->x << " ";
+		}
+		cout << endl << "Numarul de puncte din lista este n=" << n << endl;
 	}
-	return cap;
 }
 
-punct* adaugareLaInceput(punct* cap, float v) {
+punct *stergere_lista(punct *cap)
+{
 	punct *p;
-	p = new punct;
-	p->x = v;
-	p->urm = cap;
-	//p = cap;
-	return p;
-}
-
-punct* adaugareLaSfarsit(punct* cap, float v) {
-	punct *p, *q;
 	p = cap;
-	q = nullptr;
-	while (p!=NULL) {
-		q = p;
-		p = p->urm;
+	while (p)
+	{
+		cap = cap->urm;
+		delete p;
+		p = cap;
 	}
-	p = new punct;
-	p->x = v;
-	p->urm = nullptr;
-	q->urm = p;
+	cout << "Lista a fost stearsa!!" << endl;
 	return cap;
 }
 
-
-void adaugareInInterior(punct *cap, float v, float w) {
+punct *adauga_dupa_element(punct *cap, float v, float v1)
+{
+	// adauga punct cu valoare v dupa fiecare punct cu valoare v1
 	punct *p, *q;
+
 	p = cap;
-	while (cap!=NULL) {
-		if (p->x == w) {
+	while (p)
+	{
+		if (p->x == v1) // adauga punct cu valoare v
+		{
 			q = new punct;
 			q->x = v;
+			q->prec = p;
 			q->urm = p->urm;
+			if (q->urm)
+				(q->urm)->prec = q;
+
 			p->urm = q;
-			break;
+
+			p = p->urm;
 		}
+		p = p->urm;
 	}
+	return cap;
 }
 
 int main() // program liste
 {
 	punct *cap;
-
-	// PL a fost definit ca parcurgere_lista(cap)
+	float v1, v;
 
 	cap = creare_lista();
 	cout << "cap lista v=" << cap->x << endl;
-	PL;
 
-	/*cap=adaugareLaInceput(cap, 2);
-	PL;
+	parcurgere_lista(cap);
 
-	cap = adaugareLaSfarsit(cap, 3);
-	PL;
+	parcurgere_lista_invers(cap);
 
-	adaugareInInterior(cap, 10, 2);
-	PL;*/
+	/* //stergere intreaga lista
+	cap=stergere_lista(cap);
+	parcurgere_lista(cap);
 
-	cap = stergereElementLista(cap, 2);
-	PL;
+	//recreeaza lista
+	cap=creare_lista();
+	parcurgere_lista(cap);
+	*/
+
+	cout << "Adauga dupa valoare v1= "; cin >> v1;
+	cout << "          valoarea v= "; cin >> v;
+	cap = adauga_dupa_element(cap, v, v1);
+
+	parcurgere_lista(cap);
+
 
 	system("PAUSE");
 	return 0;
