@@ -19,7 +19,7 @@ using namespace chrono;
 
 int main()
 {
-	int op, op1, op2;
+	int op, op1, op2, op3, op4;
 	time_point<steady_clock> start, end;
 
 	do  // reia meniu principal pana la exit
@@ -28,6 +28,9 @@ int main()
 		cout << "PROGRAME SDA " << endl;
 		cout << "1. Probleme diverse" << endl;
 		cout << "2. Algoritmi de sortare" << endl;
+		cout << "3. Liste dinamice" << endl;
+		cout << "4. Grafuri" << endl;
+		cout << "5. Arbori binari" << endl;
 		// se vor adauga optiuni
 		cout << "0. Exit program." << endl;
 		cout << "Optiune : "; cin >> op;
@@ -76,15 +79,16 @@ int main()
 		case 2: //algoritmi de sortare
 			do
 			{
-				cout << "2.1. Algoritm Buble Sort" << endl;
-				cout << "2.2. Algoritm Selection Sort" << endl;
-				cout << "2.3. Algoritm Counting Sort" << endl;
-				cout << "2.4. Algoritm Quick Sort" << endl;
-				cout << "2.5. Algoritm Merge Sort" << endl;
-				cout << "2.6. Algoritm Insertion Sort" << endl;
-				cout << "2.7. Algoritm Radix Sort" << endl;
-				cout << "2.8. Algoritm Shell Sort" << endl;
-				cout << "2.9. Cautare element" << endl;
+				cout << endl << "ALGORITMI DE SORTARE" << endl;
+				cout << "2.1. Algoritm Bubble Sort " << endl;
+				cout << "2.2. Counting Sort " << endl;
+				cout << "2.3. Selection Sort " << endl;
+				cout << "2.4. Quicksort " << endl;
+				cout << "2.5. Merge Sort " << endl;
+				cout << "2.6. Insertion Sort " << endl;
+				cout << "2.7. Shell Sort " << endl;
+				cout << "2.8. Radix Sort " << endl;
+				cout << "2.9. Cautarea intr-u sir ordonat " << endl;
 				cout << "2.0. Exit algoritmi de sortare!" << endl;
 				cout << "Optiune algoritmi de sortare: "; cin >> op2;
 				switch (op2)
@@ -190,6 +194,122 @@ int main()
 				}
 			} while (op2 != 0);
 			break;
+
+		 case 3: //Liste dinamice
+			 do
+			 {
+				 cout << endl << "LISTE DINAMICE" << endl;
+				 cout << "3.1. Liste simplu inlantuite " << endl;
+				 cout << "3.2. Liste dublu inlantuite " << endl;
+				 cout << "3.3. Stive " << endl;
+				 cout << "3.4. Cozi " << endl;
+				 cout << "3.5. Aplicatia 1: Adunarea si inmultirea a doua polinoame " << endl;
+				 cout << "3.6. Aplicatia 2: Interclasarea a doua liste ordonate " << endl;
+				 cout << "3.7. Aplicatia 3: Verificarea parantezelor intr-o expresie aritmetica " << endl;
+				 cout << "3.0. Exit liste dinamice!" << endl;
+
+
+				 cout << "Optiune liste dinamice: "; cin >> op3;
+				 switch (op3)
+				 {
+				 case 1: //liste simplu inlatuite
+				 {
+
+				 }
+				 break;
+
+				 case 2:
+					 // Liste dublu inlatuite
+				 {
+
+				 }
+				 break;
+
+				 case 0:
+					 cout << "A terminat submeniu 3" << endl << endl;
+					 break;
+
+				 default:
+					 cout << "Optiune invalida!" << endl;
+					 break;
+
+				 }
+			 } while (op3 != 0);
+			 break;
+
+		 case 4: // Grafuri
+			 do
+			 {
+				 cout << endl << "GRAFURI" << endl;
+				 cout << "4.1. Citirea unui graf si cele 3 reprezentari" << endl;
+				 cout << "4.2. Determinarea existentei drumurilor intr-un graf (cu matr. de adiacenta) " << endl;
+				 cout << "4.3. Algoritmul Dijkstra." << endl;
+				 cout << "4.4. Alritmul Roy-Floyd" << endl;
+				 cout << "4.0. Exit grafuri!" << endl;
+				 cout << "Optiune grafuri: "; cin >> op4;
+				 switch (op4)
+				 {
+				 case 1: //citire graf
+				 {
+
+				 }
+				 break;
+
+				 case 2:
+					 // dterminare drumuri cu matricea de adiacenta
+				 {
+
+				 }
+				 break;
+
+				 case 0:
+					 cout << "A terminat submeniu 4" << endl << endl;
+					 break;
+
+				 default:
+					 cout << "Optiune invalida!" << endl;
+					 break;
+
+				 }
+			 } while (op4 != 0);
+			 break;
+
+		 case 5: // Arbori
+			 do
+			 {
+				 cout << endl << "ARBORI" << endl;
+				 cout << "5.1. Citire arbore binar si pargurgere: SRD, RSD, SDR" << endl;
+				 cout << "5.2. Arbori binari de cautare (creare, cautare, stergere, adaugare)" << endl;
+				 cout << "5.0. Exit liste dinamice!" << endl;
+
+
+				 cout << "Optiune arbori: "; cin >> op5;
+				 switch (op5)
+				 {
+				 case 1: //citire arbore binar si parcurgere
+				 {
+
+				 }
+				 break;
+
+				 case 2:
+					 // arbori binari de cautare
+				 {
+
+				 }
+				 break;
+
+				 case 0:
+					 cout << "A terminat submeniu 5" << endl << endl;
+					 break;
+
+				 default:
+					 cout << "Optiune invalida!" << endl;
+					 break;
+
+				 }
+			 } while (op5 != 0);
+			 break;
 
 		case 0:
 			cout << "Bye! Bye!" << endl;
