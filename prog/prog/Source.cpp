@@ -19,7 +19,7 @@ using namespace chrono;
 
 int main()
 {
-	int op, op1, op2, op3, op4;
+	int op, op1, op2, op3, op4, op5;
 	time_point<steady_clock> start, end;
 
 	do  // reia meniu principal pana la exit
