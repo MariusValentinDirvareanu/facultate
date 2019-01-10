@@ -1,6 +1,6 @@
 #include "RadixSort.h"
 
-RadixSort::RadixSort(vector<float> a)
+RadixSort::RadixSort(vector<double> a)
 {
 	numarZecimale(a);
 	vec.resize(a.size());
@@ -13,7 +13,7 @@ RadixSort::RadixSort(vector<float> a)
     afisare();
 }
 
-void RadixSort::numarZecimale(vector<float> b) {
+void RadixSort::numarZecimale(vector<double> b) {
 	z = to_string(b[0]-static_cast<int>(b[0]));
 	for (i = z.size() - 1; i >= 0; i--) {
 		if(z[i]!='0'&&z[i]!='.') {
@@ -22,10 +22,10 @@ void RadixSort::numarZecimale(vector<float> b) {
 	}
 }
 
-void RadixSort::copyVectorRealtoInt(vector<float> b){
+void RadixSort::copyVectorRealtoInt(vector<double> b){
 	for(i=0;i<b.size();++i)
 	{
-		vec[i] = (int)(round(b[i] * pow(10,zecimale)));
+		vec[i] = (int)(b[i] * pow(10,zecimale));
 	}
 }
 
@@ -69,7 +69,7 @@ void RadixSort::rsort()
 
 void RadixSort::afisare() const{
     for(auto ee:vec){
-        cout << static_cast<float>(ee)/pow(10,zecimale) << ' ';
+        cout << static_cast<double>(ee)/pow(10,zecimale) << ' ';
     }
     cout << endl;
 }

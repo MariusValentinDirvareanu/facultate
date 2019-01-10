@@ -16,13 +16,13 @@ class RadixSort
 		string z;
 
     public:
-        RadixSort(vector<float>);
+        RadixSort(vector<double>);
         ~RadixSort();
     private:
         void countSort(int);
         void rsort();
         void afisare() const;
         int maxElement();
-		void numarZecimale(vector<float>);
-		void copyVectorRealtoInt(vector<float>);
+		void numarZecimale(vector<double>);
+		void copyVectorRealtoInt(vector<double>);
 };
