@@ -23,6 +23,7 @@ int RadixSort::maxElement(){
 void RadixSort::countSort(int n, int exp)
 {
     output.resize(n);
+	fill(Count.begin(), Count.end(), 0);
 
     for (i = 0; i < n; i++)
         Count.at((vec.at(i)/exp)%10 )++;
