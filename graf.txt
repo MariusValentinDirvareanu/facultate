@@ -1,0 +1,204 @@
+#include <iostream>
+
+using namespace std;
+
+struct treenod{
+    treenod *parinte;
+    treenod *fiustg;
+    treenod *fiudr;
+    int val;
+
+};
+
+void citeste_arbore(treenod *radacina, int ok,int nivel)
+{
+    char c;
+    int v;
+    // nivel = nivelul la care se fac citirile fiilor
+
+    treenod *a;
+    // ok=1 daca adauga copii
+    if (ok)
+    {
+        cout<<"Fiu stg la nivel "<<nivel<<" [d/n] ?"; cin>>c;
+        if ((c=='d')||(c=='D'))
+         {
+           cout<<"Valoare fiu stg = "; cin>>v;
+           a=new treenod;
+           a->parinte=radacina;
+           a->fiustg=NULL;
+           a->fiudr=NULL;
+           a->val=v;
+           radacina->fiustg=a;
+           cout<<"Fiul are fii [d/n] ?"; cin>>c;
+           if ((c=='d')||(c=='D'))
+              {
+                  nivel++;
+                  citeste_arbore(a,1,nivel);
+              }
+         }
+        cout<<"Fiu dr la nivel "<<nivel<<" [d/n] ?"; cin>>c;
+        if ((c=='d')||(c=='D'))
+        {
+            cout<<"Valoare fiu dr = "; cin>>v;
+            a=new treenod;
+            a->parinte=radacina;
+            a->fiustg=NULL;
+            a->fiudr=NULL;
+            a->val=v;
+            radacina->fiudr=a;
+            cout<<"Fiul are fii [d/n] ?"; cin>>c;
+            if ((c=='d')||(c=='D'))
+              {
+                  nivel++;
+                  citeste_arbore(a,1,nivel);
+              }
+        }
+    }
+}
+
+void parcurgere_SRD(treenod *radacina)
+{
+   if (radacina->fiustg != NULL)
+   {
+       parcurgere_SRD(radacina->fiustg);
+   }
+   else
+       {
+           cout<<radacina->val<<" , ";
+       }
+
+   if (radacina->fiudr != NULL)
+        {
+           parcurgere_SRD(radacina->fiudr);
+        }
+   if ((radacina->parinte != NULL) && (radacina->fiustg == NULL))
+        cout<<radacina->parinte->val<<" , ";
+        //// ???????????????????????
+}
+
+int main()
+
+{ int v;
+
+ treenod *arboreB;
+
+ // citeste arbore Binar
+ // citim radacina
+ cout<<"Valoare radacina = "; cin>>v;
+ arboreB=new treenod;
+ arboreB->parinte=NULL;
+ arboreB->fiustg=NULL;
+ arboreB->fiudr=NULL;
+ arboreB->val=v;
+
+ citeste_arbore(arboreB,1,0);
+
+ // parcurgere Stanga-Radacina-Dreapta
+ cout<<"Parcurgere SRD: "<<endl;
+ parcurgere_SRD(arboreB);
+
+ return 0;
+}
+#include <iostream>
+
+using namespace std;
+
+struct treenod{
+    treenod *parinte;
+    treenod *fiustg;
+    treenod *fiudr;
+    int val;
+
+};
+
+void citeste_arbore(treenod *radacina, int ok,int nivel)
+{
+    char c;
+    int v;
+    // nivel = nivelul la care se fac citirile fiilor
+
+    treenod *a;
+    // ok=1 daca adauga copii
+    if (ok)
+    {
+        cout<<"Fiu stg la nivel "<<nivel<<" [d/n] ?"; cin>>c;
+        if ((c=='d')||(c=='D'))
+         {
+           cout<<"Valoare fiu stg = "; cin>>v;
+           a=new treenod;
+           a->parinte=radacina;
+           a->fiustg=NULL;
+           a->fiudr=NULL;
+           a->val=v;
+           radacina->fiustg=a;
+           cout<<"Fiul are fii [d/n] ?"; cin>>c;
+           if ((c=='d')||(c=='D'))
+              {
+                  nivel++;
+                  citeste_arbore(a,1,nivel);
+              }
+         }
+        cout<<"Fiu dr la nivel "<<nivel<<" [d/n] ?"; cin>>c;
+        if ((c=='d')||(c=='D'))
+        {
+            cout<<"Valoare fiu dr = "; cin>>v;
+            a=new treenod;
+            a->parinte=radacina;
+            a->fiustg=NULL;
+            a->fiudr=NULL;
+            a->val=v;
+            radacina->fiudr=a;
+            cout<<"Fiul are fii [d/n] ?"; cin>>c;
+            if ((c=='d')||(c=='D'))
+              {
+                  nivel++;
+                  citeste_arbore(a,1,nivel);
+              }
+        }
+    }
+}
+
+void parcurgere_SRD(treenod *radacina)
+{
+   if (radacina->fiustg != NULL)
+   {
+       parcurgere_SRD(radacina->fiustg);
+   }
+   else
+       {
+           cout<<radacina->val<<" , ";
+       }
+
+   if (radacina->fiudr != NULL)
+        {
+           parcurgere_SRD(radacina->fiudr);
+        }
+   if ((radacina->parinte != NULL) && (radacina->fiustg == NULL))
+        cout<<radacina->parinte->val<<" , ";
+        //// ???????????????????????
+}
+
+int main()
+
+{ int v;
+
+ treenod *arboreB;
+
+ // citeste arbore Binar
+ // citim radacina
+ cout<<"Valoare radacina = "; cin>>v;
+ arboreB=new treenod;
+ arboreB->parinte=NULL;
+ arboreB->fiustg=NULL;
+ arboreB->fiudr=NULL;
+ arboreB->val=v;
+
+ citeste_arbore(arboreB,1,0);
+
+ // parcurgere Stanga-Radacina-Dreapta
+ cout<<"Parcurgere SRD: "<<endl;
+ parcurgere_SRD(arboreB);
+
+ return 0;
+}
