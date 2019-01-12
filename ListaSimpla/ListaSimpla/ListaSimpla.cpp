@@ -1,16 +1,13 @@
 #include "ListaSimpla.h"
 
 
-auto ListaSimpla::creare_lista() -> punct*
+ListaSimpla::ListaSimpla()
 {
-	punct *prim, *p, *q;
-	float v; char a;
-
 	prim = new punct;
 	cout << "Valoarea primului punct v= ";
 	cin >> v;
 	prim->x = v;
-	prim->urm = NULL;
+	prim->urm = nullptr;
 	q = prim; // q este utlimul punct din lista, care la inceput coincide cu primul punct
 	do
 	{
@@ -22,17 +19,36 @@ auto ListaSimpla::creare_lista() -> punct*
 			cin >> v;
 			p = new punct;
 			p->x = v;
-			p->urm = NULL;
+			p->urm = nullptr;
 			q->urm = p;
 			q = p; // ultimul punct din lista
 		}
 	} while ((a == 'd') || (a == 'D'));
-	return prim;
+	cap = prim;
+}
+
+ListaSimpla::ListaSimpla(unsigned n)
+{
+	cout << "Introduceti cele " << n << " valori ale liste." << endl;
+	prim = new punct;
+	cin >> v;
+	prim->x = v;
+	prim->urm = nullptr;
+	q = prim; // q este utlimul punct din lista, care la inceput coincide cu primul punct
+	for (unsigned i = 0; i < n - 1; ++i)
+	{
+		cin >> v;
+		p = new punct;
+		p->x = v;
+		p->urm = nullptr;
+		q->urm = p;
+		q = p; // ultimul punct din lista
+	}
+	cap = prim;
 }
 
 void ListaSimpla::parcurgere_lista()
 {
-	punct *p;
 	int n = 0; //numara punctele din lista
 
 	if (!cap) // cap este NULL, adica lista este vida
@@ -50,10 +66,8 @@ void ListaSimpla::parcurgere_lista()
 	}
 }
 
-#define PL parcurgere_lista();
-
 //stergere lista completa
-auto ListaSimpla::stergereLista() -> punct*
+void ListaSimpla::stergereLista()
 {
 	punct *p;
 	p = cap;
@@ -62,13 +76,12 @@ auto ListaSimpla::stergereLista() -> punct*
 		delete p;
 		p = cap;
 	}
-	return p;
+	cap = p;
 }
 
 
-auto ListaSimpla::stergereElementLista(float element) -> punct*
+void ListaSimpla::stergereElementLista(float element)
 {
-	punct *p, *q;
 	q = nullptr;
 	p = cap;
 	if (cap->x == element) {
@@ -80,7 +93,7 @@ auto ListaSimpla::stergereElementLista(float element) -> punct*
 	{
 		p = cap->urm;
 		q = cap;
-		while (p != NULL) {
+		while (p != nullptr) {
 			//q = p->urm;
 			//cap = cap->urm;
 			if (p->x == element) {
@@ -92,30 +105,24 @@ auto ListaSimpla::stergereElementLista(float element) -> punct*
 			p = p->urm;
 		}
 	}
-	return cap;
+	cap = cap;
 }
 
-void ListaSimpla::stergereElementDinLista(float element)
-{
-	cap = stergereElementLista(element);
-}
 
-auto ListaSimpla::adaugareLaInceput(float v) -> punct*
+void ListaSimpla::adaugareLaInceput(float v)
 {
 	punct *p;
 	p = new punct;
 	p->x = v;
 	p->urm = cap;
-	//p = cap;
-	return p;
+	cap = p;
 }
 
-auto ListaSimpla::adaugareLaSfarsit(float v) -> punct*
+void ListaSimpla::adaugareLaSfarsit(float v)
 {
-	punct *p, *q;
 	p = cap;
 	q = nullptr;
-	while (p != NULL) {
+	while (p != nullptr) {
 		q = p;
 		p = p->urm;
 	}
@@ -123,7 +130,6 @@ auto ListaSimpla::adaugareLaSfarsit(float v) -> punct*
 	p->x = v;
 	p->urm = nullptr;
 	q->urm = p;
-	return cap;
 }
 
 
@@ -140,30 +146,6 @@ void ListaSimpla::adaugareInInterior(float v, float w) {
 		}
 	}
 }
-
-
-
-ListaSimpla::ListaSimpla()
-{
-	// PL a fost definit ca parcurgere_lista(cap)
-
-	cap = creare_lista();
-	cout << "cap lista v=" << cap->x << endl;
-	PL;
-
-	/*cap=adaugareLaInceput(cap, 2);
-	PL;
-
-	cap = adaugareLaSfarsit(cap, 3);
-	PL;
-
-	adaugareInInterior(cap, 10, 2);
-	PL;*/
-
-	cap = stergereElementLista(2);
-	PL;
-}
-
 
 ListaSimpla::~ListaSimpla()
 {

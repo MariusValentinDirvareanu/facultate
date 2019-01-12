@@ -7,6 +7,7 @@ class ListaSimpla
 {
 public:
 	ListaSimpla();
+	ListaSimpla(unsigned);
 	~ListaSimpla();
 
 private:
@@ -14,16 +15,15 @@ private:
 		float x;
 		punct *urm;
 	};
-	auto creare_lista()->punct*;
-	auto stergereElementLista(float)->punct*;
-	auto stergereLista()->punct*;
-	auto adaugareLaInceput(float)->punct*;
-	auto adaugareLaSfarsit(float)->punct*;
 	punct *cap;
+	punct *prim, *p, *q;
+	float v;
+	char a;
 public:
 	void parcurgere_lista();
-	void stergereElementDinLista(float);
 	void adaugareInInterior(float, float);
-
+	void stergereElementLista(float);
+	void stergereLista();
+	void adaugareLaInceput(float);
+	void adaugareLaSfarsit(float);
 };
-
