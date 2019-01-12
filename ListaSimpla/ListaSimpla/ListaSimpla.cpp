@@ -94,18 +94,16 @@ void ListaSimpla::stergereElementLista(float element)
 		p = cap->urm;
 		q = cap;
 		while (p != nullptr) {
-			//q = p->urm;
-			//cap = cap->urm;
 			if (p->x == element) {
-				q->urm = p->urm;
-				//p->urm = cap;
+				cap->urm = p->urm;
 				delete p;
 				break;
 			}
+			cap = cap->urm;
 			p = p->urm;
 		}
 	}
-	cap = cap;
+	cap = q;
 }
 
 
