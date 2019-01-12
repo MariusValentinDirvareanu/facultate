@@ -132,16 +132,29 @@ void ListaSimpla::adaugareLaSfarsit(float v)
 
 
 void ListaSimpla::adaugareInInterior(float v, float w) {
-	punct *p, *q;
-	p = cap;
-	while (cap != nullptr) {
-		if (p->x == w) {
-			q = new punct;
-			q->x = v;
-			q->urm = p->urm;
-			p->urm = q;
-			break;
+	prim = cap;
+	if(cap->x==w)
+	{
+		q = new punct;
+		q->x = v;
+		q->urm = cap;
+		cap = q;
+	}
+	else {
+		p = cap;
+		cap = cap->urm;
+		while (cap != nullptr) {
+			if (cap->x == w) {
+				q = new punct;
+				q->x = v;
+				q->urm = cap;
+				p->urm = q;
+				break;
+			}
+			cap = cap->urm;
+			p = p->urm;
 		}
+		cap = prim;
 	}
 }
 

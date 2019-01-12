@@ -8,8 +8,8 @@ int main() // program liste
 {
 	ListaSimpla listasimpla(10);
 	listasimpla.parcurgere_lista();
-	//listasimpla.adaugareInInterior(2, 20);
-	//listasimpla.parcurgere_lista();
+	listasimpla.adaugareInInterior(20, 2);
+	listasimpla.parcurgere_lista();
 	listasimpla.adaugareLaInceput(100);
 	listasimpla.parcurgere_lista();
 	listasimpla.adaugareLaSfarsit(300);
