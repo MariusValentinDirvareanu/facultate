@@ -14,6 +14,7 @@
 #include "Cautare.h"
 #include "vec.h"
 #include "Arbore.h"
+#include "ListaSimpla.h"
 
 using namespace std;
 using namespace chrono;
@@ -234,6 +235,18 @@ int main()
 				{
 				case 1: //liste simplu inlatuite
 					{
+						ListaSimpla listasimpla(10);
+						listasimpla.parcurgere_lista();
+						listasimpla.adaugareInInterior(20, 2);
+						listasimpla.parcurgere_lista();
+						listasimpla.adaugareLaInceput(100);
+						listasimpla.parcurgere_lista();
+						listasimpla.adaugareLaSfarsit(300);
+						listasimpla.parcurgere_lista();
+						listasimpla.stergereElementLista(8);
+						listasimpla.parcurgere_lista();
+						listasimpla.stergereLista();
+						listasimpla.parcurgere_lista();
 					}
 					break;
 

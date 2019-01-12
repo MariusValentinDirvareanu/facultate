@@ -127,6 +127,7 @@
     <ClCompile Include="EcGrad2.cpp" />
     <ClCompile Include="FactoriPrimi.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
+    <ClCompile Include="ListaSimpla.cpp" />
     <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="RadixSort.cpp" />
@@ -142,6 +143,7 @@
     <ClInclude Include="CountingSort.h" />
     <ClInclude Include="EcGrad2.h" />
     <ClInclude Include="FactoriPrimi.h" />
+    <ClInclude Include="ListaSimpla.h" />
     <ClInclude Include="vec.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="MergeSort.h" />
