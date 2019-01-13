@@ -15,6 +15,7 @@
 #include "vec.h"
 #include "Arbore.h"
 #include "ListaSimpla.h"
+#include "ListaDubla.h"
 
 using namespace std;
 using namespace chrono;
@@ -253,6 +254,22 @@ int main()
 				case 2:
 					// Liste dublu inlatuite
 					{
+						ListaDubla listadubla(3);
+						listadubla.parcurgere_lista();
+						listadubla.parcurgere_lista_invers();
+						listadubla.adaugaElementInterior(20, 2);
+						listadubla.parcurgere_lista();
+						listadubla.parcurgere_lista_invers();
+						listadubla.adaugareLaInceput(1000);
+						listadubla.adaugareLaSfarsit(2000);
+						listadubla.parcurgere_lista();
+						listadubla.parcurgere_lista_invers();
+						listadubla.stergereElementLista(1000);
+						listadubla.parcurgere_lista();
+						listadubla.parcurgere_lista_invers();
+						listadubla.stergere_lista();
+						listadubla.parcurgere_lista();
+						listadubla.parcurgere_lista_invers();
 					}
 					break;
 
