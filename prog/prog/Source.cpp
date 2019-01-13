@@ -16,6 +16,7 @@
 #include "Arbore.h"
 #include "ListaSimpla.h"
 #include "ListaDubla.h"
+#include "Coada.h"
 
 using namespace std;
 using namespace chrono;
@@ -270,6 +271,17 @@ int main()
 						listadubla.stergere_lista();
 						listadubla.parcurgere_lista();
 						listadubla.parcurgere_lista_invers();
+					}
+					break;
+
+				case 4:
+					{
+						Coada coada(3);
+						coada.parcurgere_coada();
+						coada.adauga_element_coada(4);
+						coada.parcurgere_coada();
+						coada.stergere_element_coada();
+						coada.parcurgere_coada();
 					}
 					break;
 
