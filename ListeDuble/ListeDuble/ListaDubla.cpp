@@ -123,6 +123,7 @@ void ListaDubla::adaugaElementInterior(float elementAdaugat, float elementExiste
 		q->x = elementAdaugat;
 		q->urm = cap;
 		q->prec = nullptr;
+		cap->prec = q;
 		cap = q;
 	}
 	else {
@@ -136,11 +137,11 @@ void ListaDubla::adaugaElementInterior(float elementAdaugat, float elementExiste
 				q->x = elementAdaugat;
 				q->prec = p;
 				q->urm = cap;
+				cap->prec = q;
 				p->urm = q;
 				break;
 			}
 			cap = cap->urm;
-			p = p->urm;
 			p = p->urm;
 		}
 		cap = prim;
@@ -160,18 +161,22 @@ void ListaDubla::stergereElementLista(float element)
 	}
 	else
 	{
-		p = cap->urm;
+		//p = cap;
 		q = cap;
-		while (p != nullptr) {
-			if (p->x == element) {
-				p->prec = (p->prec)->prec;
-				cap->urm = p->urm;
-				delete p;
+		cap = cap->urm;
+		while (cap != nullptr) {
+			if (cap->x == element) {
+				q->urm = cap->urm;
+				if (q->urm != nullptr) {
+					(q->urm)->prec = q;
+				}
+				delete cap;
 				break;
 			}
 			cap = cap->urm;
-			p = p->urm;
+			q = q->urm;
 		}
+		cap = p;
 	}
 	//cap = q;
 }
