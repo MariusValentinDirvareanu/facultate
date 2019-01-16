@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{608D9CE4-5297-4820-960C-1434643E2694}</ProjectGuid>
-    <RootNamespace>prog</RootNamespace>
+    <ProjectGuid>{C1F8EEBB-F534-42E0-913A-2DC0ECD562F3}</ProjectGuid>
+    <RootNamespace>Polinoame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,7 +76,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -85,7 +84,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -96,7 +94,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -111,7 +108,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -119,46 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Arbore.cpp" />
-    <ClCompile Include="BubleSort.cpp" />
-    <ClCompile Include="Cautare.cpp" />
-    <ClCompile Include="CMMDC.cpp" />
-    <ClCompile Include="Coada.cpp" />
-    <ClCompile Include="CountingSort.cpp" />
-    <ClCompile Include="EcGrad2.cpp" />
-    <ClCompile Include="FactoriPrimi.cpp" />
-    <ClCompile Include="InsertionSort.cpp" />
-    <ClCompile Include="ListaDubla.cpp" />
-    <ClCompile Include="ListaSimpla.cpp" />
-    <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="Polinom.cpp" />
-    <ClCompile Include="QuickSort.cpp" />
-    <ClCompile Include="RadixSort.cpp" />
-    <ClCompile Include="SelectionSort.cpp" />
-    <ClCompile Include="ShellSort.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Stiva.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Arbore.h" />
-    <ClInclude Include="BubleSort.h" />
-    <ClInclude Include="Cautare.h" />
-    <ClInclude Include="CMMDC.h" />
-    <ClInclude Include="Coada.h" />
-    <ClInclude Include="CountingSort.h" />
-    <ClInclude Include="EcGrad2.h" />
-    <ClInclude Include="FactoriPrimi.h" />
-    <ClInclude Include="ListaDubla.h" />
-    <ClInclude Include="ListaSimpla.h" />
     <ClInclude Include="Polinom.h" />
-    <ClInclude Include="Stiva.h" />
-    <ClInclude Include="vec.h" />
-    <ClInclude Include="InsertionSort.h" />
-    <ClInclude Include="MergeSort.h" />
-    <ClInclude Include="QuickSort.h" />
-    <ClInclude Include="RadixSort.h" />
-    <ClInclude Include="SelectionSort.h" />
-    <ClInclude Include="ShellSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
