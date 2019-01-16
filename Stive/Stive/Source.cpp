@@ -6,8 +6,9 @@ using namespace std;
 
 int main() // program liste
 {
-	Stiva stiva;
-	stiva.schimbareBaza(210, 16);
+	Stiva stiva(3);
+	stiva.parcurgere_stiva();
+	stiva.stergere_din_stiva();
 	stiva.parcurgere_stiva();
 	
 	system("PAUSE");

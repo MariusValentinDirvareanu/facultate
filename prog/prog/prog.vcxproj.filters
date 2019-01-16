@@ -66,6 +66,9 @@
     <ClCompile Include="Coada.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Stiva.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EcGrad2.h">
@@ -117,6 +120,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Coada.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stiva.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

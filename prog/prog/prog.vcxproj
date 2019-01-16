@@ -136,6 +136,7 @@
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="ShellSort.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Stiva.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbore.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="FactoriPrimi.h" />
     <ClInclude Include="ListaDubla.h" />
     <ClInclude Include="ListaSimpla.h" />
+    <ClInclude Include="Stiva.h" />
     <ClInclude Include="vec.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="MergeSort.h" />

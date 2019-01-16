@@ -17,6 +17,7 @@
 #include "ListaSimpla.h"
 #include "ListaDubla.h"
 #include "Coada.h"
+#include "Stiva.h"
 
 using namespace std;
 using namespace chrono;
@@ -273,6 +274,15 @@ int main()
 						listadubla.parcurgere_lista_invers();
 					}
 					break;
+
+				case 3:
+					{
+						Stiva stiva(3);
+						stiva.parcurgere_stiva();
+						stiva.stergere_din_stiva();
+						stiva.parcurgere_stiva();
+					}
+					break;;
 
 				case 4:
 					{
