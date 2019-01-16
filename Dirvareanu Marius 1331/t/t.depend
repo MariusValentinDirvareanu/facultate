@@ -1,0 +1,126 @@
+# depslib dependency file v1.0
+1540536197 source:e:\utilizatori\dirvareanu marius 1331\t\main.cpp
+	<iostream>
+	"EcGrad2.h"
+	"FactoriPrimi.h"
+	"BubleSort.h"
+	"cmmdc.h"
+	"SelectionSort.h"
+	"CountingSort.h"
+	"QuickSort.h"
+	"MergeSort.h"
+	"InsertionSort.h"
+	"RadixSort.h"
+	"ShellSort.h"
+	"Cautare.h"
+
+1539320248 e:\utilizatori\dirvareanu marius 1331\t\ecgrad2.h
+
+1539320248 e:\utilizatori\dirvareanu marius 1331\t\factoriprimi.h
+
+1539320172 e:\utilizatori\dirvareanu marius 1331\t\bublesort.h
+	<vector>
+
+1539320248 e:\utilizatori\dirvareanu marius 1331\t\selectionsort.h
+	<vector>
+	<iostream>
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\bublesort.cpp
+	"BubleSort.h"
+	<iostream>
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\ecgrad2.cpp
+	<iostream>
+	<cmath>
+	"EcGrad2.h"
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\factoriprimi.cpp
+	"FactoriPrimi.h"
+	<iostream>
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\selectionsort.cpp
+	"SelectionSort.h"
+
+1539322706 e:\utilizatori\dirvareanu marius 1331\t\include\cmmdc.h
+	<iostream>
+
+1539322702 source:e:\utilizatori\dirvareanu marius 1331\t\src\cmmdc.cpp
+	"cmmdc.h"
+
+1539320248 e:\utilizatori\dirvareanu marius 1331\t\include\ecgrad2.h
+
+1539320248 e:\utilizatori\dirvareanu marius 1331\t\include\factoriprimi.h
+
+1539320172 e:\utilizatori\dirvareanu marius 1331\t\include\bublesort.h
+	<vector>
+
+1539320248 e:\utilizatori\dirvareanu marius 1331\t\include\selectionsort.h
+	<vector>
+	<iostream>
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\src\bublesort.cpp
+	"BubleSort.h"
+	<iostream>
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\src\ecgrad2.cpp
+	<iostream>
+	<cmath>
+	"EcGrad2.h"
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\src\factoriprimi.cpp
+	"FactoriPrimi.h"
+	<iostream>
+
+1539243484 source:e:\utilizatori\dirvareanu marius 1331\t\src\selectionsort.cpp
+	"SelectionSort.h"
+
+1539850448 source:e:\utilizatori\dirvareanu marius 1331\t\src\countingsort.cpp
+	"CountingSort.h"
+
+1539850448 e:\utilizatori\dirvareanu marius 1331\t\include\countingsort.h
+	<iostream>
+	<vector>
+
+1539925065 e:\utilizatori\dirvareanu marius 1331\t\include\quicksort.h
+	<iostream>
+	<vector>
+
+1539925066 e:\utilizatori\dirvareanu marius 1331\t\include\mergesort.h
+	<iostream>
+	<vector>
+
+1539850448 source:e:\utilizatori\dirvareanu marius 1331\t\src\mergesort.cpp
+	"MergeSort.h"
+
+1539850448 source:e:\utilizatori\dirvareanu marius 1331\t\src\quicksort.cpp
+	"QuickSort.h"
+
+1539927983 e:\utilizatori\dirvareanu marius 1331\t\include\insertionsort.h
+	<iostream>
+	<vector>
+
+1539928108 source:e:\utilizatori\dirvareanu marius 1331\t\src\insertionsort.cpp
+	"InsertionSort.h"
+
+1539929335 e:\utilizatori\dirvareanu marius 1331\t\include\radixsort.h
+	<iostream>
+	<vector>
+	<algorithm>
+
+1539929873 source:e:\utilizatori\dirvareanu marius 1331\t\src\radixsort.cpp
+	"RadixSort.h"
+
+1540530363 e:\utilizatori\dirvareanu marius 1331\t\include\shellsort.h
+	<iostream>
+	<vector>
+
+1540530269 source:e:\utilizatori\dirvareanu marius 1331\t\src\shellsort.cpp
+	"ShellSort.h"
+
+1540535921 e:\utilizatori\dirvareanu marius 1331\t\include\cautare.h
+	<iostream>
+	<vector>
+
+1540536117 source:e:\utilizatori\dirvareanu marius 1331\t\src\cautare.cpp
+	"Cautare.h"
+
