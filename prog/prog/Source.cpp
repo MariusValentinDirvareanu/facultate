@@ -19,6 +19,7 @@
 #include "Coada.h"
 #include "Stiva.h"
 #include "Polinom.h"
+#include "Graf.h"
 
 #define BR cout << "---------------------------------------------" << endl;
 
@@ -372,6 +373,10 @@ int main()
 				{
 				case 1: //citire graf
 					{
+						BR;
+						Graf graf;
+						BR;
+
 					}
 					break;
 
@@ -410,7 +415,7 @@ int main()
 				{
 				case 1: //citire arbore binar si parcurgere
 					{
-					BR;
+						BR;
 						Arbore arbore;
 						BR;
 					}

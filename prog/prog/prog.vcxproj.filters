@@ -72,6 +72,9 @@
     <ClCompile Include="Polinom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Graf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EcGrad2.h">
@@ -129,6 +132,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Polinom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

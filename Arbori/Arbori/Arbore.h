@@ -23,9 +23,9 @@ private:
 	int v;
 	int okf = 0;
 
-	void citeste_arbore(Arbore::treenod*, int, int);
-	void parcurgere_SRD(Arbore::treenod*);
-	void parcurgere_RSD(Arbore::treenod*);
-	void parcurgere_SDR(Arbore::treenod*);
+	void citeste_arbore(treenod*, int, int);
+	void parcurgere_SRD(treenod*);
+	void parcurgere_RSD(treenod*);
+	void parcurgere_SDR(treenod*);
 };
 
