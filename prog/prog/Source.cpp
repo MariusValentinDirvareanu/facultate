@@ -20,6 +20,7 @@
 #include "Stiva.h"
 #include "Polinom.h"
 #include "Graf.h"
+#include "Interclasare.h"
 
 #define BR cout << "---------------------------------------------" << endl;
 
@@ -343,6 +344,14 @@ int main()
 						BR;
 					}
 					break;
+
+				case 6:
+					{
+					BR;
+					Interclasare interclasare;
+					BR;
+					}
+				break;
 
 				case 0:
 					cout << "A terminat submeniu 3" << endl << endl;
