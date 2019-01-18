@@ -21,6 +21,8 @@
 #include "Polinom.h"
 #include "Graf.h"
 #include "Interclasare.h"
+#include "Dijkstra.h"
+#include "Floyd.h"
 
 #define BR cout << "---------------------------------------------" << endl;
 
@@ -392,8 +394,28 @@ int main()
 				case 2:
 					// dterminare drumuri cu matricea de adiacenta
 					{
+					BR;
+					cout << "NU E FACUT" << endl;
+					BR;
 					}
 					break;
+
+				case 3:
+				{
+					BR;
+					Dijkstra graf2;
+					BR;
+				}
+				break;
+
+				case 4:
+				{
+					BR;
+					Floyd floyd;
+					BR;
+
+				}
+				break;
 
 				case 0:
 					cout << "A terminat submeniu 4" << endl << endl;
